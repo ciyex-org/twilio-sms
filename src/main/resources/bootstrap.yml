@@ -4,12 +4,12 @@ spring:
   cloud:
     vault:
       enabled: true
-      uri: ${VAULT_URI:https://vault.apps-stage.us-east.in.hinisoft.com}
+      uri: ${VAULT_URI:http://localhost:8200}
       authentication: ${VAULT_AUTH_METHOD:TOKEN}
       token: ${VAULT_TOKEN:}
       kubernetes:
         role: twilio-sms
-        kubernetes-path: ${VAULT_K8S_AUTH_PATH:kubernetes-stage}
+        kubernetes-path: ${VAULT_K8S_AUTH_PATH:kubernetes}
       kv:
         enabled: true
         backend: secret
