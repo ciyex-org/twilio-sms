@@ -1,0 +1,108 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '4.0.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+	id 'org.graalvm.buildtools.native' version '0.10.6'
+}
+
+group = 'org.ciyex.sms'
+version = '0.0.1'
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.withType(JavaCompile) {
+	options.compilerArgs.add('-parameters')
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "2025.1.1")
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+dependencies {
+	// Ciyex Platform SDK
+	implementation 'org.ciyex:ciyex-platform-sdk:0.1.2'
+
+	// Spring Boot core
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// Spring Data JPA + PostgreSQL
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'org.postgresql:postgresql'
+
+	// Flyway
+	implementation 'org.flywaydb:flyway-core'
+	implementation 'org.flywaydb:flyway-database-postgresql'
+
+	// Spring Cloud Config + Vault
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
+	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+	// Twilio SDK
+	implementation 'com.twilio.sdk:twilio:10.6.4'
+
+	// JWT
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
+
+	// Jackson
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+
+	// Caching for credential resolution
+	implementation 'com.github.ben-manes.caffeine:caffeine:3.2.2'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok:1.18.38'
+	annotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+	// Testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+graalvmNative {
+	binaries {
+		main {
+			buildArgs.add('--initialize-at-build-time=org.slf4j')
+			buildArgs.add('-H:+ReportExceptionStackTraces')
+		}
+	}
+}
+
+bootRun {
+	def envFile = file("${rootProject.projectDir}/.env")
+	if (envFile.exists()) {
+		envFile.readLines().each { line ->
+			line = line.trim()
+			if (line && !line.startsWith('#')) {
+				def idx = line.indexOf('=')
+				if (idx > 0) {
+					environment line.substring(0, idx), line.substring(idx + 1)
+				}
+			}
+		}
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

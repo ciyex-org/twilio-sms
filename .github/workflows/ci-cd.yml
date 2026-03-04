@@ -1,0 +1,146 @@
+name: CI/CD Pipeline
+run-name: "${{ github.event.inputs.action == 'Promote to RC' && 'Promote to RC' || github.event.inputs.action == 'Promote to GA' && 'Promote to GA (next RC)' || github.event.inputs.action == 'Skip RC' && 'Skip RC (remove oldest RC tag)' || '' }}"
+
+on:
+  push:
+    branches:
+      - main
+      - 'hotfix-*'
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action to perform'
+        type: choice
+        options:
+          - 'Build'
+          - 'Promote to RC'
+          - 'Promote to GA'
+          - 'Skip RC'
+        default: 'Build'
+
+concurrency:
+  group: version-management
+  cancel-in-progress: false
+
+env:
+  IMAGE_NAME: twilio-sms
+  REGISTRY: ${{ secrets.REGISTRY_URL }}
+
+jobs:
+  version:
+    name: Determine Version
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.action == 'Build'
+    runs-on: [self-hosted, linux, x64]
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      environment: ${{ steps.version.outputs.environment }}
+      overlay: ${{ steps.version.outputs.overlay }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get base version from build.gradle
+        id: base
+        run: |
+          BASE_VERSION=$(grep "^version = " build.gradle | sed "s/version = '\(.*\)'/\1/")
+          echo "base_version=$BASE_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Calculate version
+        id: version
+        run: |
+          BASE_RAW="${{ steps.base.outputs.base_version }}"
+          BASE=$(echo "$BASE_RAW" | sed -E 's/-(alpha|rc).*$//')
+
+          if [[ "${{ github.ref }}" == refs/tags/v* ]]; then
+            VERSION="${GITHUB_REF#refs/tags/v}"
+            ENV="prod"
+            OVERLAY="prod"
+          elif [[ "${{ github.ref }}" == refs/heads/hotfix-* ]]; then
+            HOTFIX_BASE="${GITHUB_REF#refs/heads/hotfix-}"
+            LAST_HOTFIX=$(git tag -l "${HOTFIX_BASE}-hotfix.*" --sort=-v:refname | head -n1)
+            if [ -n "$LAST_HOTFIX" ]; then
+              LAST_NUM=$(echo "$LAST_HOTFIX" | sed -E "s/.*-hotfix\.([0-9]+)/\1/")
+              HOTFIX_NUM=$((LAST_NUM + 1))
+            else
+              HOTFIX_NUM=1
+            fi
+            VERSION="${HOTFIX_BASE}-hotfix.${HOTFIX_NUM}"
+            ENV="prod"
+            OVERLAY="prod"
+          else
+            LAST_TAG=$(git tag -l "${BASE}-alpha.*" --sort=-v:refname | head -n1)
+            if [ -n "$LAST_TAG" ]; then
+              LAST_NUM=$(echo "$LAST_TAG" | sed "s/${BASE}-alpha.//")
+              ALPHA_NUM=$((LAST_NUM + 1))
+            else
+              ALPHA_NUM=1
+            fi
+            VERSION="${BASE}-alpha.${ALPHA_NUM}"
+            ENV="dev"
+            OVERLAY="dev"
+          fi
+
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "environment=$ENV" >> $GITHUB_OUTPUT
+          echo "overlay=$OVERLAY" >> $GITHUB_OUTPUT
+
+  build-deploy:
+    name: Build & Deploy (${{ needs.version.outputs.environment }})
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'Build')
+    runs-on: [self-hosted, linux, x64]
+    needs: [version]
+    environment:
+      name: ${{ needs.version.outputs.environment }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Build with Gradle
+        run: ./gradlew build -x test
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Private Registry
+        run: |
+          echo "${{ secrets.PROD_REGISTRY_PASSWORD }}" | docker login $REGISTRY -u ${{ secrets.PROD_REGISTRY_USERNAME }} --password-stdin
+
+      - name: Build and Push Docker Image
+        env:
+          DOCKER_BUILDKIT: 1
+        run: |
+          VERSION="${{ needs.version.outputs.version }}"
+          docker build -t $REGISTRY/$IMAGE_NAME:$VERSION -t $REGISTRY/$IMAGE_NAME:${{ needs.version.outputs.environment }} .
+          docker push $REGISTRY/$IMAGE_NAME:$VERSION
+          docker push $REGISTRY/$IMAGE_NAME:${{ needs.version.outputs.environment }}
+
+      - name: Create Git tag for alpha/rc
+        if: "!startsWith(github.ref, 'refs/tags/')"
+        run: |
+          VERSION="${{ needs.version.outputs.version }}"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git tag -a "$VERSION" -m "Release $VERSION"
+          git push origin "$VERSION" || echo "Tag already exists"
+
+      - name: Summary
+        run: |
+          VERSION="${{ needs.version.outputs.version }}"
+          echo "Image pushed: $REGISTRY/$IMAGE_NAME:$VERSION"
+          echo "ArgoCD Image Updater will auto-update the deployment overlay"

@@ -1,0 +1,4815 @@
+{
+  "comment": "Spring Framework 7.0.2",
+  "reflection": [
+    {
+      "type": "ch.qos.logback.classic.LoggerContext"
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.SyslogStartConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "ch.qos.logback.core.rolling.helper.DateTokenConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "ch.qos.logback.core.rolling.helper.IntegerTokenConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "com.fasterxml.jackson.datatype.jsr310.JavaTimeModule",
+      "condition": {
+        "typeReached": "org.springframework.http.converter.json.Jackson2ObjectMapperBuilder"
+      },
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "com.zaxxer.hikari.HikariDataSource",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "jakarta.inject.Inject"
+    },
+    {
+      "type": "jakarta.inject.Provider"
+    },
+    {
+      "type": "jakarta.inject.Qualifier"
+    },
+    {
+      "type": "jakarta.persistence.EntityManagerFactory",
+      "condition": {
+        "typeReached": "org.springframework.orm.jpa.SharedEntityManagerCreator"
+      },
+      "methods": [
+        {
+          "name": "getCriteriaBuilder",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getMetamodel",
+          "parameterTypes": [ ]
+        }
+      ]
+    },
+    {
+      "type": "jakarta.persistence.NamedEntityGraph",
+      "condition": {
+        "typeReached": "org.springframework.data.jpa.repository.EntityGraph"
+      },
+      "allPublicMethods": true
+    },
+    {
+      "type": "jakarta.persistence.Query",
+      "methods": [
+        {
+          "name": "getResultStream",
+          "parameterTypes": [ ]
+        }
+      ]
+    },
+    {
+      "type": "jakarta.servlet.Servlet"
+    },
+    {
+      "type": "java.io.Console"
+    },
+    {
+      "type": "java.io.Reader"
+    },
+    {
+      "type": "java.lang.Class"
+    },
+    {
+      "type": "java.lang.Enum",
+      "methods": [
+        {
+          "name": "getDeclaringClass",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.String"
+    },
+    {
+      "type": "java.lang.Throwable",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "java.net.http.HttpClient",
+      "condition": {
+        "typeReached": "java.net.http.HttpClient"
+      }
+    },
+    {
+      "type": "java.net.URI",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "java.sql.Date",
+      "condition": {
+        "typeReached": "java.sql.Date"
+      },
+      "methods": [
+        {
+          "name": "toLocalDate",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "java.time.LocalDate"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.sql.Timestamp",
+      "condition": {
+        "typeReached": "java.sql.Timestamp"
+      },
+      "methods": [
+        {
+          "name": "from",
+          "parameterTypes": [
+            "java.time.Instant"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.sql.Types",
+      "allPublicFields": true
+    },
+    {
+      "type": "java.text.NumberFormat"
+    },
+    {
+      "type": "java.time.Duration"
+    },
+    {
+      "type": "java.util.concurrent.Future"
+    },
+    {
+      "type": "java.util.EventListener"
+    },
+    {
+      "type": "java.util.Map"
+    },
+    {
+      "type": "java.util.Properties",
+      "allPublicMethods": true
+    },
+    {
+      "type": "java.util.SortedSet"
+    },
+    {
+      "type": "javax.money.MonetaryAmount"
+    },
+    {
+      "type": "kotlin.Metadata"
+    },
+    {
+      "type": "kotlin.reflect.full.KClasses"
+    },
+    {
+      "type": "org.apache.hc.client5.http.impl.classic.HttpClients",
+      "condition": {
+        "typeReached": "org.apache.hc.client5.http.impl.classic.HttpClients"
+      }
+    },
+    {
+      "type": "org.bouncycastle.crypto.signers.PSSSigner",
+      "allPublicClasses": true
+    },
+    {
+      "type": "org.ciyex.sms.TwilioSmsApplication"
+    },
+    {
+      "type": "org.ciyex.sms.TwilioSmsApplication__ApplicationContextInitializer",
+      "condition": {
+        "typeReached": "org.ciyex.sms.TwilioSmsApplication"
+      },
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        }
+      ]
+    },
+    {
+      "type": "org.eclipse.core.runtime.FileLocator"
+    },
+    {
+      "type": "org.hibernate.query.sqm.tree.select.SqmQueryPart[]",
+      "unsafeAllocated": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArray",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfBoolean",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfByte",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfChar",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfDouble",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfFloat",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfInt",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfLong",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForArraysOfShort",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForCharSequence",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForCollection",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.hibernate.validator.internal.constraintvalidators.bv.notempty.NotEmptyValidatorForMap",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.postgresql.ds.PGSimpleDataSource",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.reactivestreams.Publisher"
+    },
+    {
+      "type": "org.slf4j.bridge.SLF4JBridgeHandler"
+    },
+    {
+      "type": "org.springframework.beans.BeanInfoFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect",
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.beans.factory.Aware"
+    },
+    {
+      "type": "org.springframework.beans.factory.BeanFactory",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.beans.factory.BeanFactoryAware"
+    },
+    {
+      "type": "org.springframework.beans.factory.BeanNameAware"
+    },
+    {
+      "type": "org.springframework.beans.factory.config.BeanFactoryPostProcessor"
+    },
+    {
+      "type": "org.springframework.beans.factory.config.BeanPostProcessor"
+    },
+    {
+      "type": "org.springframework.beans.factory.DisposableBean"
+    },
+    {
+      "type": "org.springframework.beans.factory.FactoryBean"
+    },
+    {
+      "type": "org.springframework.beans.factory.InitializingBean"
+    },
+    {
+      "type": "org.springframework.beans.factory.SmartInitializingSingleton"
+    },
+    {
+      "type": "org.springframework.boot.ApplicationContextFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.ApplicationProperties",
+      "fields": [
+        {
+          "name": "allowBeanDefinitionOverriding"
+        },
+        {
+          "name": "allowCircularReferences"
+        },
+        {
+          "name": "bannerMode"
+        },
+        {
+          "name": "keepAlive"
+        },
+        {
+          "name": "lazyInitialization"
+        },
+        {
+          "name": "logStartupInfo"
+        },
+        {
+          "name": "registerShutdownHook"
+        },
+        {
+          "name": "sources"
+        },
+        {
+          "name": "webApplicationType"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getSources",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getWebApplicationType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isAllowBeanDefinitionOverriding",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isAllowCircularReferences",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isKeepAlive",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isLazyInitialization",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isLogStartupInfo",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isRegisterShutdownHook",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAllowBeanDefinitionOverriding",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setAllowCircularReferences",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setBannerMode",
+          "parameterTypes": [
+            "org.springframework.boot.Banner$Mode"
+          ]
+        },
+        {
+          "name": "setKeepAlive",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setLazyInitialization",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setLogStartupInfo",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setRegisterShutdownHook",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setSources",
+          "parameterTypes": [
+            "java.util.Set"
+          ]
+        },
+        {
+          "name": "setWebApplicationType",
+          "parameterTypes": [
+            "org.springframework.boot.WebApplicationType"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.AutoConfigurationImportFilter",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.AutoConfigurationImportListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.condition.ConditionEvaluationReportAutoConfigurationImportListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.condition.OnBeanCondition",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.condition.OnClassCondition",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.condition.OnWebApplicationCondition",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializingApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.preinitialize.CharsetsBackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.preinitialize.ConversionServiceBackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.ssl.BundleContentNotWatchableFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.bootstrap.BootstrapRegistryInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.builder.ParentContextCloserApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.ClearCachesApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.cloud.CloudFoundryVcapEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataLocation",
+      "allDeclaredMethods": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "boolean",
+            "java.lang.String",
+            "org.springframework.boot.origin.Origin"
+          ]
+        },
+        {
+          "name": "of",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataLocationResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataNotFoundFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataProperties",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.List",
+            "org.springframework.boot.context.config.ConfigDataProperties$Activate"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigDataProperties$Activate",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "org.springframework.boot.cloud.CloudPlatform",
+            "java.lang.String[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigTreeConfigDataLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.ConfigTreeConfigDataLocationResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.StandardConfigDataLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.StandardConfigDataLocationResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.SystemEnvironmentConfigDataLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.config.SystemEnvironmentConfigDataLocationResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.ContextIdApplicationContextInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.event.EventPublishingRunListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.FileEncodingApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.logging.LoggingApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.properties.BoundConfigurationProperties",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.boot.context.properties.ConfigurationPropertiesBinder$ConfigurationPropertiesBinderFactory"
+    },
+    {
+      "type": "org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor"
+    },
+    {
+      "type": "org.springframework.boot.context.properties.IncompatibleConfigurationFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.context.properties.NotConstructorBoundInjectionFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.AotInitializerNotFoundFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.BeanDefinitionOverrideFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.BeanNotOfRequiredTypeFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.BindFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.BindValidationFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyNameFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.MissingParameterNamesFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.NoSuchMethodFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.PatternParseFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.UnboundConfigurationPropertyFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.analyzer.ValidationExceptionFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.FailureAnalysisReporter",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.FailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.FailureAnalyzers",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.env.PropertiesPropertySourceLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.env.PropertySourceLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.env.YamlPropertySourceLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.EnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.health.autoconfigure.actuate.endpoint.NoSuchHealthContributorFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.http.converter.autoconfigure.MessageConverterBackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.io.ApplicationResourceLoader$FilePathResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.io.Base64ProtocolResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.io.ClassPathResourceFilePathResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.io.ProtocolResolverApplicationContextInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jackson.autoconfigure.JacksonBackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jdbc.autoconfigure.DataSourceBeanCreationFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jdbc.autoconfigure.HikariDriverConfigurationFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializerDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jdbc.SpringJdbcDependsOnDatabaseInitializationDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jpa.JpaDatabaseInitializerDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.jpa.JpaDependsOnDatabaseInitializationDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.java.JavaLoggingSystem$Factory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.log4j2.Log4J2LoggingSystem$Factory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.logback.ColorConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.logback.CorrelationIdConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.logback.EnclosedInSquareBracketsConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.logback.LogbackLoggingSystem$Factory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.LoggingSystemFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.ElasticCommonSchemaProperties",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "org.springframework.boot.logging.structured.ElasticCommonSchemaProperties$Service"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.ElasticCommonSchemaProperties$Service",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.GraylogExtendedLogFormatProperties",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "org.springframework.boot.logging.structured.GraylogExtendedLogFormatProperties$Service"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.GraylogExtendedLogFormatProperties$Service",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.StructuredLoggingJsonProperties",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.Set",
+            "java.util.Set",
+            "java.util.Map",
+            "java.util.Map",
+            "org.springframework.boot.logging.structured.StructuredLoggingJsonProperties$StackTrace",
+            "org.springframework.boot.logging.structured.StructuredLoggingJsonProperties$Context",
+            "java.util.Set"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.StructuredLoggingJsonProperties$Context",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "boolean",
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.logging.structured.StructuredLoggingJsonProperties$StackTrace",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "org.springframework.boot.logging.structured.StructuredLoggingJsonProperties$StackTrace$Root",
+            "java.lang.Integer",
+            "java.lang.Integer",
+            "java.lang.Boolean",
+            "java.lang.Boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.boot.micrometer.metrics.autoconfigure.ServiceLevelObjectiveBoundary",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.boot.micrometer.metrics.ValidationFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.SpringApplicationRunListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.SpringBootExceptionReporter",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.support.AnsiOutputApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.support.EnvironmentPostProcessorApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.support.RandomValuePropertySourceEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.support.SpringApplicationJsonEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.support.SystemEnvironmentPropertySourceEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.tomcat.autoconfigure.TomcatBackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.tomcat.ConnectorStartFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.validation.autoconfigure.JakartaValidationBackgroundPreinitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter"
+    },
+    {
+      "type": "org.springframework.boot.web.context.reactive.FilteredReactiveWebContextResourceFilePathResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.web.context.servlet.ServletContextResourceFilePathResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.web.server.context.MissingWebServerFactoryBeanFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.web.server.PortInUseFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContextFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContextFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.WebApplicationType$Deducer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.webmvc.autoconfigure.JspTemplateAvailabilityProvider",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.boot.webmvc.WebMvcWebApplicationTypeDeducer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.BootstrapApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.BootstrapConfigFileApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.BootstrapConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.BootstrapImportSelectorConfiguration"
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "fields": [
+        {
+          "name": "bootstrapProperties"
+        },
+        {
+          "name": "propertySourceLocators"
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.config.PropertySourceBootstrapProperties",
+      "fields": [
+        {
+          "name": "allowOverride"
+        },
+        {
+          "name": "initializeOnContextRefresh"
+        },
+        {
+          "name": "overrideNone"
+        },
+        {
+          "name": "overrideSystemProperties"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isAllowOverride",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isInitializeOnContextRefresh",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isOverrideNone",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isOverrideSystemProperties",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAllowOverride",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setInitializeOnContextRefresh",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setOverrideNone",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setOverrideSystemProperties",
+          "parameterTypes": [
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.config.PropertySourceLocator"
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.encrypt.DecryptEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.encrypt.EnvironmentDecryptApplicationInitializer"
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.encrypt.KeyProperties",
+      "fields": [
+        {
+          "name": "failOnError"
+        },
+        {
+          "name": "key"
+        },
+        {
+          "name": "keyStore"
+        },
+        {
+          "name": "salt"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKey",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKeyStore",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getSalt",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isFailOnError",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setFailOnError",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setKey",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setKeyStore",
+          "parameterTypes": [
+            "org.springframework.cloud.bootstrap.encrypt.KeyProperties$KeyStore"
+          ]
+        },
+        {
+          "name": "setSalt",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.encrypt.KeyProperties$KeyStore",
+      "fields": [
+        {
+          "name": "alias"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "password"
+        },
+        {
+          "name": "secret"
+        },
+        {
+          "name": "type"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAlias",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLocation",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getPassword",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getSecret",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAlias",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setLocation",
+          "parameterTypes": [
+            "org.springframework.core.io.Resource"
+          ]
+        },
+        {
+          "name": "setPassword",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setSecret",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setType",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.LoggingSystemShutdownListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.RefreshBootstrapRegistryInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.bootstrap.TextEncryptorConfigBootstrapper",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.client.HostInfoEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigClientAutoConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigClientProperties",
+      "fields": [
+        {
+          "name": "charset"
+        },
+        {
+          "name": "discovery"
+        },
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "failFast"
+        },
+        {
+          "name": "headers"
+        },
+        {
+          "name": "label"
+        },
+        {
+          "name": "mediaType"
+        },
+        {
+          "name": "multipleUriStrategy"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "password"
+        },
+        {
+          "name": "profile"
+        },
+        {
+          "name": "requestConnectTimeout"
+        },
+        {
+          "name": "requestReadTimeout"
+        },
+        {
+          "name": "sendAllLabels"
+        },
+        {
+          "name": "sendState"
+        },
+        {
+          "name": "tls"
+        },
+        {
+          "name": "token"
+        },
+        {
+          "name": "uri"
+        },
+        {
+          "name": "username"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getCharset",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getDiscovery",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getHeaders",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLabel",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getMediaType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getMultipleUriStrategy",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getName",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getPassword",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getProfile",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRequestConnectTimeout",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRequestReadTimeout",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getTls",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getToken",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getUri",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getUsername",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isFailFast",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isSendAllLabels",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isSendState",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setCharset",
+          "parameterTypes": [
+            "java.nio.charset.Charset"
+          ]
+        },
+        {
+          "name": "setDiscovery",
+          "parameterTypes": [
+            "org.springframework.cloud.config.client.ConfigClientProperties$Discovery"
+          ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setFailFast",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setHeaders",
+          "parameterTypes": [
+            "java.util.Map"
+          ]
+        },
+        {
+          "name": "setLabel",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setMediaType",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setMultipleUriStrategy",
+          "parameterTypes": [
+            "org.springframework.cloud.config.client.ConfigClientProperties$MultipleUriStrategy"
+          ]
+        },
+        {
+          "name": "setName",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setPassword",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setProfile",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRequestConnectTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setRequestReadTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setSendAllLabels",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setSendState",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setTls",
+          "parameterTypes": [
+            "org.springframework.cloud.configuration.TlsProperties"
+          ]
+        },
+        {
+          "name": "setToken",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setUri",
+          "parameterTypes": [
+            "java.lang.String[]"
+          ]
+        },
+        {
+          "name": "setUsername",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigClientProperties$Discovery",
+      "fields": [
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "serviceId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getServiceId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setServiceId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigClientRetryBootstrapper",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigServerConfigDataLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigServerConfigDataLocationResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigServerConfigDataMissingEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigServerConfigDataMissingEnvironmentPostProcessor$ImportExceptionFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigServiceBootstrapConfiguration",
+      "allDeclaredConstructors": true,
+      "fields": [
+        {
+          "name": "environment"
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.config.client.ConfigServicePropertySourceLocator"
+    },
+    {
+      "type": "org.springframework.cloud.config.client.diagnostics.analyzer.InvalidApplicationNameExceptionFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.DiscoveryClientConfigServiceBootstrapConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.client.RetryTemplateFactory",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.cloud.config.environment.Environment",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.config.environment.PropertySource",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.configuration.CompatibilityNotMetFailureAnalyzer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.context.properties.ConfigurationPropertiesBeans",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder"
+    },
+    {
+      "type": "org.springframework.cloud.context.restart.RestartListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.util.random.CachedRandomPropertySourceEnvironmentPostProcessor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.DiscoveryClientVaultBootstrapConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.ReactiveDiscoveryClientVaultBootstrapConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultAutoConfiguration"
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultAutoConfiguration$TaskSchedulerWrapper"
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultBootstrapConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultBootstrapPropertySourceConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultConfigDataLoader",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultConfigDataLocationResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultKeyValueBackendProperties",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true,
+      "fields": [
+        {
+          "name": "applicationName"
+        },
+        {
+          "name": "backend"
+        },
+        {
+          "name": "backendVersion"
+        },
+        {
+          "name": "defaultContext"
+        },
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "profiles"
+        },
+        {
+          "name": "profileSeparator"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getApplicationName",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getBackend",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getBackendVersion",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getDefaultContext",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getProfiles",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getProfileSeparator",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setApplicationName",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setBackend",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setBackendVersion",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setDefaultContext",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setEnvironment",
+          "parameterTypes": [
+            "org.springframework.core.env.Environment"
+          ]
+        },
+        {
+          "name": "setProfiles",
+          "parameterTypes": [
+            "java.util.List"
+          ]
+        },
+        {
+          "name": "setProfileSeparator",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultKeyValueBackendPropertiesSupport"
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties",
+      "fields": [
+        {
+          "name": "appId"
+        },
+        {
+          "name": "applicationName"
+        },
+        {
+          "name": "appRole"
+        },
+        {
+          "name": "authentication"
+        },
+        {
+          "name": "awsEc2"
+        },
+        {
+          "name": "awsIam"
+        },
+        {
+          "name": "azureMsi"
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "connectionTimeout"
+        },
+        {
+          "name": "discovery"
+        },
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "failFast"
+        },
+        {
+          "name": "gcpGce"
+        },
+        {
+          "name": "gcpIam"
+        },
+        {
+          "name": "github"
+        },
+        {
+          "name": "host"
+        },
+        {
+          "name": "kubernetes"
+        },
+        {
+          "name": "namespace"
+        },
+        {
+          "name": "pcf"
+        },
+        {
+          "name": "port"
+        },
+        {
+          "name": "reactive"
+        },
+        {
+          "name": "readTimeout"
+        },
+        {
+          "name": "scheme"
+        },
+        {
+          "name": "session"
+        },
+        {
+          "name": "ssl"
+        },
+        {
+          "name": "token"
+        },
+        {
+          "name": "uri"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAppId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getApplicationName",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAppRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAuthentication",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAwsEc2",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAwsIam",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAzureMsi",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getConfig",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getConnectionTimeout",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getDiscovery",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getGcpGce",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getGcpIam",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getGithub",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getHost",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKubernetes",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getNamespace",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getPcf",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getPort",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getReactive",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getReadTimeout",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getScheme",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getSession",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getSsl",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getToken",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getUri",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isFailFast",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAppId",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$AppIdProperties"
+          ]
+        },
+        {
+          "name": "setApplicationName",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setAppRole",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$AppRoleProperties"
+          ]
+        },
+        {
+          "name": "setAuthentication",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$AuthenticationMethod"
+          ]
+        },
+        {
+          "name": "setAwsEc2",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$AwsEc2Properties"
+          ]
+        },
+        {
+          "name": "setAwsIam",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$AwsIamProperties"
+          ]
+        },
+        {
+          "name": "setAzureMsi",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$AzureMsiProperties"
+          ]
+        },
+        {
+          "name": "setConfig",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$Config"
+          ]
+        },
+        {
+          "name": "setConnectionTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setDiscovery",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$Discovery"
+          ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setEnvironment",
+          "parameterTypes": [
+            "org.springframework.core.env.Environment"
+          ]
+        },
+        {
+          "name": "setFailFast",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setGcpGce",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$GcpGceProperties"
+          ]
+        },
+        {
+          "name": "setGcpIam",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$GcpIamProperties"
+          ]
+        },
+        {
+          "name": "setGithub",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$GithubProperties"
+          ]
+        },
+        {
+          "name": "setHost",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setKubernetes",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$KubernetesProperties"
+          ]
+        },
+        {
+          "name": "setNamespace",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setPcf",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$PcfProperties"
+          ]
+        },
+        {
+          "name": "setPort",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setReactive",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$Reactive"
+          ]
+        },
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setScheme",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setSession",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$Session"
+          ]
+        },
+        {
+          "name": "setSsl",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$Ssl"
+          ]
+        },
+        {
+          "name": "setToken",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setUri",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$AppIdProperties",
+      "fields": [
+        {
+          "name": "appIdPath"
+        },
+        {
+          "name": "networkInterface"
+        },
+        {
+          "name": "userId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAppIdPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getNetworkInterface",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getUserId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAppIdPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setNetworkInterface",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setUserId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$AppRoleProperties",
+      "fields": [
+        {
+          "name": "appRolePath"
+        },
+        {
+          "name": "role"
+        },
+        {
+          "name": "roleId"
+        },
+        {
+          "name": "secretId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAppRolePath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRoleId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getSecretId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAppRolePath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRoleId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setSecretId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$AwsEc2Properties",
+      "fields": [
+        {
+          "name": "awsEc2Path"
+        },
+        {
+          "name": "identityDocument"
+        },
+        {
+          "name": "nonce"
+        },
+        {
+          "name": "role"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAwsEc2Path",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getIdentityDocument",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getNonce",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAwsEc2Path",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setIdentityDocument",
+          "parameterTypes": [
+            "java.net.URI"
+          ]
+        },
+        {
+          "name": "setNonce",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$AwsIamProperties",
+      "fields": [
+        {
+          "name": "awsPath"
+        },
+        {
+          "name": "endpointUri"
+        },
+        {
+          "name": "region"
+        },
+        {
+          "name": "role"
+        },
+        {
+          "name": "serverName"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAwsPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getEndpointUri",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRegion",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getServerName",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAwsPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setEndpointUri",
+          "parameterTypes": [
+            "java.net.URI"
+          ]
+        },
+        {
+          "name": "setRegion",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setServerName",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$AzureMsiProperties",
+      "fields": [
+        {
+          "name": "azurePath"
+        },
+        {
+          "name": "identityTokenService"
+        },
+        {
+          "name": "metadataService"
+        },
+        {
+          "name": "role"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getAzurePath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getIdentityTokenService",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getMetadataService",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAzurePath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setIdentityTokenService",
+          "parameterTypes": [
+            "java.net.URI"
+          ]
+        },
+        {
+          "name": "setMetadataService",
+          "parameterTypes": [
+            "java.net.URI"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$Config",
+      "fields": [
+        {
+          "name": "lifecycle"
+        },
+        {
+          "name": "order"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLifecycle",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getOrder",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setLifecycle",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$ConfigLifecycle"
+          ]
+        },
+        {
+          "name": "setOrder",
+          "parameterTypes": [
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$ConfigLifecycle",
+      "fields": [
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "expiryThreshold"
+        },
+        {
+          "name": "leaseEndpoints"
+        },
+        {
+          "name": "leaseStrategy"
+        },
+        {
+          "name": "minRenewal"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getExpiryThreshold",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLeaseEndpoints",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLeaseStrategy",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getMinRenewal",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setExpiryThreshold",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        },
+        {
+          "name": "setLeaseEndpoints",
+          "parameterTypes": [
+            "org.springframework.vault.core.lease.LeaseEndpoints"
+          ]
+        },
+        {
+          "name": "setLeaseStrategy",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$PredefinedLeaseStrategy"
+          ]
+        },
+        {
+          "name": "setMinRenewal",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$Discovery",
+      "fields": [
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "serviceId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getServiceId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setServiceId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$GcpCredentials",
+      "fields": [
+        {
+          "name": "encodedKey"
+        },
+        {
+          "name": "location"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getEncodedKey",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLocation",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setEncodedKey",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setLocation",
+          "parameterTypes": [
+            "org.springframework.core.io.Resource"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$GcpGceProperties",
+      "fields": [
+        {
+          "name": "gcpPath"
+        },
+        {
+          "name": "role"
+        },
+        {
+          "name": "serviceAccount"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getGcpPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getServiceAccount",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setGcpPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setServiceAccount",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$GcpIamProperties",
+      "fields": [
+        {
+          "name": "credentials"
+        },
+        {
+          "name": "gcpPath"
+        },
+        {
+          "name": "jwtValidity"
+        },
+        {
+          "name": "projectId"
+        },
+        {
+          "name": "role"
+        },
+        {
+          "name": "serviceAccountId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getCredentials",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getGcpPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getJwtValidity",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getProjectId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getServiceAccountId",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setGcpPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setJwtValidity",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        },
+        {
+          "name": "setProjectId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setServiceAccountId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$GithubProperties",
+      "fields": [
+        {
+          "name": "allowCliToken"
+        },
+        {
+          "name": "githubPath"
+        },
+        {
+          "name": "token"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getGithubPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getToken",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isAllowCliToken",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setAllowCliToken",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setGithubPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setToken",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$KubernetesProperties",
+      "fields": [
+        {
+          "name": "kubernetesPath"
+        },
+        {
+          "name": "role"
+        },
+        {
+          "name": "serviceAccountTokenFile"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKubernetesPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getServiceAccountTokenFile",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setKubernetesPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setServiceAccountTokenFile",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$PcfProperties",
+      "fields": [
+        {
+          "name": "instanceCertificate"
+        },
+        {
+          "name": "instanceKey"
+        },
+        {
+          "name": "pcfPath"
+        },
+        {
+          "name": "role"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getInstanceCertificate",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getInstanceKey",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getPcfPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setInstanceCertificate",
+          "parameterTypes": [
+            "org.springframework.core.io.Resource"
+          ]
+        },
+        {
+          "name": "setInstanceKey",
+          "parameterTypes": [
+            "org.springframework.core.io.Resource"
+          ]
+        },
+        {
+          "name": "setPcfPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$Reactive",
+      "fields": [
+        {
+          "name": "enabled"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$Session",
+      "fields": [
+        {
+          "name": "lifecycle"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getLifecycle",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setLifecycle",
+          "parameterTypes": [
+            "org.springframework.cloud.vault.config.VaultProperties$SessionLifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$SessionLifecycle",
+      "fields": [
+        {
+          "name": "enabled"
+        },
+        {
+          "name": "expiryThreshold"
+        },
+        {
+          "name": "refreshBeforeExpiry"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getExpiryThreshold",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRefreshBeforeExpiry",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isEnabled",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setEnabled",
+          "parameterTypes": [
+            "boolean"
+          ]
+        },
+        {
+          "name": "setExpiryThreshold",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        },
+        {
+          "name": "setRefreshBeforeExpiry",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultProperties$Ssl",
+      "fields": [
+        {
+          "name": "certAuthPath"
+        },
+        {
+          "name": "enabledCipherSuites"
+        },
+        {
+          "name": "enabledProtocols"
+        },
+        {
+          "name": "keyStore"
+        },
+        {
+          "name": "keyStorePassword"
+        },
+        {
+          "name": "keyStoreType"
+        },
+        {
+          "name": "role"
+        },
+        {
+          "name": "trustStore"
+        },
+        {
+          "name": "trustStorePassword"
+        },
+        {
+          "name": "trustStoreType"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getCertAuthPath",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getEnabledCipherSuites",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getEnabledProtocols",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKeyStore",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKeyStorePassword",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getKeyStoreType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getTrustStore",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getTrustStorePassword",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getTrustStoreType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setCertAuthPath",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setEnabledCipherSuites",
+          "parameterTypes": [
+            "java.util.List"
+          ]
+        },
+        {
+          "name": "setEnabledProtocols",
+          "parameterTypes": [
+            "java.util.List"
+          ]
+        },
+        {
+          "name": "setKeyStore",
+          "parameterTypes": [
+            "org.springframework.core.io.Resource"
+          ]
+        },
+        {
+          "name": "setKeyStorePassword",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setKeyStoreType",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setTrustStore",
+          "parameterTypes": [
+            "org.springframework.core.io.Resource"
+          ]
+        },
+        {
+          "name": "setTrustStorePassword",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setTrustStoreType",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultReactiveBootstrapConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.cloud.vault.config.VaultReactiveConfiguration$ReactiveSessionManagerAdapter",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.context.ApplicationContextAware"
+    },
+    {
+      "type": "org.springframework.context.ApplicationContextInitializer",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.context.ApplicationListener",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.context.EnvironmentAware"
+    },
+    {
+      "type": "org.springframework.context.event.DefaultEventListenerFactory"
+    },
+    {
+      "type": "org.springframework.context.event.EventListenerFactory"
+    },
+    {
+      "type": "org.springframework.context.event.EventListenerMethodProcessor",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.context.Lifecycle"
+    },
+    {
+      "type": "org.springframework.context.Phased"
+    },
+    {
+      "type": "org.springframework.context.SmartLifecycle"
+    },
+    {
+      "type": "org.springframework.context.support.PropertySourcesPlaceholderConfigurer"
+    },
+    {
+      "type": "org.springframework.core.io.InputStreamSource[]",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.core.io.ProtocolResolver",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.core.io.ResourceEditor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.core.Ordered"
+    },
+    {
+      "type": "org.springframework.core.PriorityOrdered"
+    },
+    {
+      "type": "org.springframework.data.core.CustomCollectionRegistrar",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.core.CustomCollections$EclipseCollections",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.core.CustomCollections$VavrCollections",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.domain.Example",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.domain.Unpaged"
+    },
+    {
+      "type": "org.springframework.data.jpa.domain.AbstractAuditable",
+      "allDeclaredFields": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.domain.AbstractPersistable",
+      "allDeclaredFields": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.domain.support.AuditingBeanFactoryPostProcessor",
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.domain.support.AuditingEntityListener",
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.repository.Query",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.repository.query.QueryEnhancerSelector$DefaultQueryEnhancerSelector",
+      "allPublicConstructors": true,
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.repository.support.JpaRepositoryFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.jpa.repository.support.SimpleJpaRepository",
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.jpa.util.HibernateProxyDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.mapping.context.MappingContext",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.projection.SpelEvaluatingMethodInterceptor$TargetWrapper",
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.core.RepositoryMetadata",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.core.support.RepositoryFactorySupport",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.repository.core.support.RepositoryFragment",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.core.support.TransactionalRepositoryFactoryBeanSupport",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.query.FluentQuery",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.query.FluentQuery$FetchableFluentQuery",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.repository.query.QueryByExampleExecutor",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.util.KotlinBeanInfoFactory",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.util.ProxyUtils$ProxyDetector",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJackson3Configuration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJackson3Configuration$PageModule$PageModelConverter",
+      "condition": {
+        "typeReached": "org.springframework.data.web.config.SpringDataJackson3Configuration$PageModule"
+      },
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJackson3Configuration$PageModule$PlainPageSerializationWarning",
+      "condition": {
+        "typeReached": "org.springframework.data.web.config.SpringDataJackson3Configuration$PageModule"
+      },
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJackson3Modules",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJacksonConfiguration",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJacksonConfiguration$PageModule$PageModelConverter",
+      "condition": {
+        "typeReached": "org.springframework.data.web.config.SpringDataJacksonConfiguration$PageModule"
+      },
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJacksonConfiguration$PageModule$PlainPageSerializationWarning",
+      "condition": {
+        "typeReached": "org.springframework.data.web.config.SpringDataJacksonConfiguration$PageModule"
+      },
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataJacksonModules",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.data.web.config.SpringDataWebSettings",
+      "condition": {
+        "typeReached": "org.springframework.data.web.config.EnableSpringDataWebSupport"
+      },
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.data.web.PagedModel",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.data.web.PagedModel$PageMetadata",
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.http.client.AbstractClientHttpRequestFactoryWrapper",
+      "fields": [
+        {
+          "name": "requestFactory"
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.client.HttpComponentsClientHttpRequestFactory",
+      "methods": [
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.client.JdkClientHttpRequestFactory",
+      "methods": [
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.client.SimpleClientHttpRequestFactory",
+      "condition": {
+        "typeReached": "java.net.HttpURLConnection"
+      },
+      "methods": [
+        {
+          "name": "setConnectTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setConnectTimeout",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        },
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setReadTimeout",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.codec.support.DefaultClientCodecConfigurer",
+      "condition": {
+        "typeReached": "org.springframework.http.codec.CodecConfigurerFactory"
+      },
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.http.codec.support.DefaultServerCodecConfigurer",
+      "condition": {
+        "typeReached": "org.springframework.http.codec.CodecConfigurerFactory"
+      },
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.http.converter.json.ProblemDetailJacksonXmlMixin",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "methods": [
+        {
+          "name": "getDetail",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getInstance",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getProperties",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getStatus",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getTitle",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setProperty",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.HttpMethod",
+      "methods": [
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.HttpStatus",
+      "allDeclaredFields": true,
+      "allPublicConstructors": true,
+      "allDeclaredConstructors": true,
+      "allPublicMethods": true,
+      "methods": [
+        {
+          "name": "getReasonPhrase",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "is1xxInformational",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "is2xxSuccessful",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "is3xxRedirection",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "is4xxClientError",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "is5xxServerError",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "isError",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.http.MediaTypeEditor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.http.ProblemDetail",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "methods": [
+        {
+          "name": "getDetail",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getInstance",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getProperties",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getStatus",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getTitle",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "getType",
+          "parameterTypes": [ ]
+        },
+        {
+          "name": "setDetail",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setInstance",
+          "parameterTypes": [
+            "java.net.URI"
+          ]
+        },
+        {
+          "name": "setProperties",
+          "parameterTypes": [
+            "java.util.Map"
+          ]
+        },
+        {
+          "name": "setStatus",
+          "parameterTypes": [
+            "int"
+          ]
+        },
+        {
+          "name": "setStatus",
+          "parameterTypes": [
+            "org.springframework.http.HttpStatus"
+          ]
+        },
+        {
+          "name": "setTitle",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setType",
+          "parameterTypes": [
+            "java.net.URI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy",
+      "condition": {
+        "typeReached": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory"
+      },
+      "methods": [
+        {
+          "name": "shutdown",
+          "parameterTypes": [ ]
+        }
+      ]
+    },
+    {
+      "type": "org.springframework.jdbc.datasource.SimpleDriverDataSource",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.security.access.expression.method.MethodSecurityExpressionRoot",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.security.access.expression.SecurityExpressionOperations",
+      "allDeclaredFields": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.security.access.expression.SecurityExpressionRoot",
+      "allDeclaredFields": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.security.authentication.AbstractAuthenticationToken",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.security.authentication.AccountExpiredException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.AuthenticationServiceException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.BadCredentialsException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.CredentialsExpiredException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.DisabledException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureBadCredentialsEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureCredentialsExpiredEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureDisabledEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureExpiredEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureLockedEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureProviderNotFoundEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureProxyUntrustedEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.event.AuthenticationFailureServiceExceptionEvent",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.LockedException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.authentication.ProviderNotFoundException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.core.context.SecurityContextImpl",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.security.core.userdetails.UsernameNotFoundException",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.crypto.encrypt.RsaSecretEncryptor",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.security.oauth2.jwt.JwtDecoder",
+      "allPublicMethods": true
+    },
+    {
+      "type": "org.springframework.security.web.access.expression.WebSecurityExpressionRoot",
+      "allDeclaredFields": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler$SupplierCsrfToken",
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.authentication.ClientAuthentication"
+    },
+    {
+      "type": "org.springframework.vault.authentication.LifecycleAwareSessionManager",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.authentication.LifecycleAwareSessionManagerSupport",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.authentication.SessionManager"
+    },
+    {
+      "type": "org.springframework.vault.authentication.SimpleSessionManager",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.client.ClientHttpRequestFactoryFactory",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.client.RestTemplateFactory"
+    },
+    {
+      "type": "org.springframework.vault.config.AbstractVaultConfiguration$ClientFactoryWrapper"
+    },
+    {
+      "type": "org.springframework.vault.core.env.LeaseAwareVaultPropertySource",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.core.env.VaultPropertySource",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.core.lease.SecretLeaseContainer",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.core.lease.SecretLeaseContainer$LeaseRenewalScheduler",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.core.lease.SecretLeaseEventPublisher$LoggingErrorListener",
+      "allDeclaredFields": true
+    },
+    {
+      "type": "org.springframework.vault.core.ReactiveVaultTemplate$VaultListResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultListResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultOperations"
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$GetMounts",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$GetMounts$VaultMountsResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$GetUnsealStatus",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$Health",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$Seal",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$VaultHealthImpl",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$VaultInitializationResponseImpl",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultSysTemplate$VaultUnsealStatusImpl",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultTemplate"
+    },
+    {
+      "type": "org.springframework.vault.core.VaultTransitTemplate$RawTransitKeyImpl",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultTransitTemplate$VaultTransitKeyImpl",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.core.VaultVersionedKeyValueTemplate$VersionedResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.AbstractResult",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Certificate",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.CertificateBundle",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Ciphertext",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.ClientOptions",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.DerParser",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.DerParser$Asn1Object",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.DurationParser",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Hmac",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JacksonCompat",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JacksonCompat$Jackson2",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JacksonCompat$Jackson2$Jackson2ObjectMapperAccessor",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JacksonCompat$Jackson3",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JacksonCompat$Jackson3$Jackson3ObjectMapperAccessor",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JacksonCompat$ObjectMapperAccessor",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.JsonMapFlattener",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.KeyFactories",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.KeyFactories$EcPrivateKeyFactory",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.KeyFactories$KeyFactory",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.KeyFactories$RsaPrivateKeyFactory",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.KeyFactories$RsaPublicKeyFactory",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.KeystoreUtil",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.LeaseStrategy",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PemObject",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PemObject$PemObjectType",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Plaintext",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Policy",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Policy$BuiltinCapabilities",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Policy$Capability",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Policy$Rule",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Policy$Rule$RuleBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2$CapabilityToStringConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2$DurationToStringConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2$PolicyDeserializer",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2$PolicySerializer",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2$StringToCapabilityConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson2$StringToDurationConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3$CapabilityToStringConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3$DurationToStringConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3$PolicyDeserializer",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3$PolicySerializer",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3$StringToCapabilityConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.PolicyJackson3$StringToDurationConverter",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.RawTransitKey",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Signature",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.SignatureValidation",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.SslConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.SslConfiguration$AbsentResource",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.SslConfiguration$KeyConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.SslConfiguration$KeyStoreConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.TransformCiphertext",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.TransformPlaintext",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.TransitKeyType",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultCertificateRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultCertificateRequest$VaultCertificateRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultCertificateResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultDecryptionResult",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultEncryptionResult",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultHealth",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultHmacRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultHmacRequest$VaultHmacRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultInitializationRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultInitializationResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultIssuerCertificateRequestResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultMetadataRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultMetadataRequest$VaultMetadataRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultMetadataResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultMetadataResponse$VaultMetadataResponseBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultMount",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultMount$VaultMountBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultResponseSupport",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultSignatureVerificationRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultSignatureVerificationRequest$VaultSignatureVerificationRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultSignCertificateRequestResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultSignRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultSignRequest$VaultSignRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultToken",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTokenRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTokenRequest$VaultTokenRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTokenResponse",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransformContext",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransformContext$VaultTransformRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransformDecodeResult",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransformEncodeResult",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitContext",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitContext$VaultTransitRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitKey",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitKeyConfiguration",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitKeyConfiguration$VaultTransitKeyConfigurationBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitKeyCreationRequest",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultTransitKeyCreationRequest$VaultTransitKeyCreationRequestBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.VaultUnsealStatus",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Versioned",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Versioned$Metadata",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Versioned$Metadata$MetadataBuilder",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.Versioned$Version",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.vault.support.WrappedMetadata",
+      "allDeclaredFields": true,
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true
+    },
+    {
+      "type": "org.springframework.web.client.support.RestClientHttpServiceGroupAdapter",
+      "allPublicConstructors": true
+    },
+    {
+      "type": "org.springframework.web.context.ConfigurableWebApplicationContext"
+    },
+    {
+      "type": "org.springframework.web.filter.ServletRequestPathFilter",
+      "allDeclaredConstructors": true
+    },
+    {
+      "type": "org.springframework.web.servlet.DispatcherServlet"
+    },
+    {
+      "type": "org.yaml.snakeyaml.Yaml",
+      "condition": {
+        "typeReached": "org.springframework.boot.env.YamlPropertySourceLoader"
+      }
+    },
+    {
+      "type": "tools.jackson.databind.PropertyNamingStrategies",
+      "fields": [
+        {
+          "name": "KEBAB_CASE"
+        },
+        {
+          "name": "LOWER_CAMEL_CASE"
+        },
+        {
+          "name": "LOWER_CASE"
+        },
+        {
+          "name": "LOWER_DOT_CASE"
+        },
+        {
+          "name": "SNAKE_CASE"
+        },
+        {
+          "name": "UPPER_CAMEL_CASE"
+        },
+        {
+          "name": "UPPER_SNAKE_CASE"
+        }
+      ]
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.hibernate.Session",
+          "org.springframework.orm.jpa.EntityManagerProxy"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.hibernate.SessionFactory",
+          "org.springframework.orm.jpa.EntityManagerFactoryInfo"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.hibernate.query.hql.spi.SqmQueryImplementor",
+          "org.hibernate.query.sqm.spi.InterpretationsKeySource",
+          "org.hibernate.query.spi.DomainQueryExecutionContext",
+          "org.hibernate.query.SelectionQuery",
+          "org.hibernate.query.CommonQueryContract"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.hibernate.query.sql.spi.NativeQueryImplementor",
+          "org.hibernate.query.spi.DomainQueryExecutionContext",
+          "org.hibernate.query.internal.ResultSetMappingResolutionContext",
+          "org.hibernate.query.spi.QueryImplementor",
+          "org.hibernate.query.SelectionQuery",
+          "org.hibernate.query.CommonQueryContract"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.springframework.data.annotation.QueryAnnotation"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.springframework.data.jpa.repository.support.CrudMethodMetadata",
+          "org.springframework.aop.SpringProxy",
+          "org.springframework.aop.framework.Advised",
+          "org.springframework.core.DecoratingProxy"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "org.springframework.data.repository.core.RepositoryMethodContext",
+          "org.springframework.aop.SpringProxy",
+          "org.springframework.aop.framework.Advised",
+          "org.springframework.core.DecoratingProxy"
+        ]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "glob": "\/"
+    },
+    {
+      "glob": "META-INF"
+    },
+    {
+      "glob": "META-INF\/spring.factories"
+    },
+    {
+      "glob": "application*.properties"
+    },
+    {
+      "glob": "application*.xml"
+    },
+    {
+      "glob": "application*.yaml"
+    },
+    {
+      "glob": "application*.yml"
+    },
+    {
+      "glob": "banner.txt"
+    },
+    {
+      "glob": "org"
+    },
+    {
+      "glob": "org\/springframework"
+    },
+    {
+      "glob": "org\/springframework\/boot"
+    },
+    {
+      "glob": "org\/springframework\/boot\/logging"
+    },
+    {
+      "glob": "org\/springframework\/boot\/logging\/java"
+    },
+    {
+      "glob": "org\/springframework\/boot\/logging\/java\/logging-file.properties"
+    },
+    {
+      "glob": "org\/springframework\/boot\/logging\/java\/logging.properties"
+    },
+    {
+      "glob": "org\/springframework\/boot\/web"
+    },
+    {
+      "glob": "org\/springframework\/boot\/web\/server"
+    },
+    {
+      "glob": "org\/springframework\/boot\/web\/server\/mime-mappings.properties"
+    },
+    {
+      "glob": "org\/springframework\/http"
+    },
+    {
+      "glob": "org\/springframework\/http\/codec"
+    },
+    {
+      "glob": "org\/springframework\/http\/codec\/CodecConfigurer.properties"
+    },
+    {
+      "glob": "org\/springframework\/http\/mime.types"
+    },
+    {
+      "glob": "org\/springframework\/security"
+    },
+    {
+      "glob": "org\/springframework\/security\/core"
+    },
+    {
+      "glob": "org\/springframework\/security\/core\/ott"
+    },
+    {
+      "glob": "org\/springframework\/security\/core\/ott\/jdbc"
+    },
+    {
+      "glob": "org\/springframework\/security\/core\/ott\/jdbc\/one-time-tokens-schema.sql"
+    },
+    {
+      "glob": "org\/springframework\/security\/core\/userdetails"
+    },
+    {
+      "glob": "org\/springframework\/security\/core\/userdetails\/jdbc"
+    },
+    {
+      "glob": "org\/springframework\/security\/core\/userdetails\/jdbc\/users.ddl"
+    },
+    {
+      "glob": "org\/springframework\/security\/default-ui.css"
+    },
+    {
+      "glob": "org\/springframework\/security\/spring-security-webauthn.js"
+    },
+    {
+      "glob": "org\/springframework\/web"
+    },
+    {
+      "glob": "org\/springframework\/web\/util"
+    },
+    {
+      "glob": "org\/springframework\/web\/util\/HtmlCharacterEntityReferences.properties"
+    },
+    {
+      "glob": "spring.properties"
+    }
+  ],
+  "bundles": [
+    {
+      "name": "org.springframework.security.messages"
+    }
+  ]
+}

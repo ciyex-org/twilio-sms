@@ -1,0 +1,71 @@
+package org.ciyex.sms;
+
+import org.springframework.aot.generate.Generated;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration__BeanDefinitions;
+import org.springframework.boot.context.properties.BoundConfigurationProperties__BeanDefinitions;
+import org.springframework.boot.context.properties.ConfigurationPropertiesBinder__BeanDefinitions;
+import org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor__BeanDefinitions;
+import org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter__BeanDefinitions;
+import org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration__BeanDefinitions;
+import org.springframework.cloud.bootstrap.BootstrapImportSelectorConfiguration__BeanDefinitions;
+import org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration__BeanDefinitions;
+import org.springframework.cloud.bootstrap.config.PropertySourceBootstrapProperties__BeanDefinitions;
+import org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration__BeanDefinitions;
+import org.springframework.cloud.config.client.ConfigServiceBootstrapConfiguration__BeanDefinitions;
+import org.springframework.cloud.vault.config.VaultBootstrapConfiguration__BeanDefinitions;
+import org.springframework.cloud.vault.config.VaultBootstrapPropertySourceConfiguration__BeanDefinitions;
+import org.springframework.cloud.vault.config.VaultKeyValueBackendProperties__BeanDefinitions;
+import org.springframework.cloud.vault.config.VaultProperties__BeanDefinitions;
+import org.springframework.context.event.DefaultEventListenerFactory__BeanDefinitions;
+import org.springframework.context.event.EventListenerMethodProcessor__BeanDefinitions;
+
+/**
+ * Register bean definitions for the bean factory.
+ */
+@Generated
+public class TwilioSmsApplication__BeanFactoryRegistrations {
+  /**
+   * Register the bean definitions.
+   */
+  public void registerBeanDefinitions(DefaultListableBeanFactory beanFactory) {
+    beanFactory.registerBeanDefinition("org.springframework.context.event.internalEventListenerProcessor", EventListenerMethodProcessor__BeanDefinitions.getInternalEventListenerProcessorBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.context.event.internalEventListenerFactory", DefaultEventListenerFactory__BeanDefinitions.getInternalEventListenerFactoryBeanDefinition());
+    beanFactory.registerBeanDefinition("bootstrapImportSelectorConfiguration", BootstrapImportSelectorConfiguration__BeanDefinitions.getBootstrapImportSelectorConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.vault.config.VaultBootstrapPropertySourceConfiguration", VaultBootstrapPropertySourceConfiguration__BeanDefinitions.getVaultBootstrapPropertySourceConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("vaultPropertySourceLocator", VaultBootstrapPropertySourceConfiguration__BeanDefinitions.getVaultPropertySourceLocatorBeanDefinition());
+    beanFactory.registerBeanDefinition("secretLeaseContainer", VaultBootstrapPropertySourceConfiguration__BeanDefinitions.getSecretLeaseContainerBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor", ConfigurationPropertiesBindingPostProcessor__BeanDefinitions.getConfigurationPropertiesBindingPostProcessorBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.internalConfigurationPropertiesBinder", ConfigurationPropertiesBinder__BeanDefinitions.ConfigurationPropertiesBinderFactory.getInternalConfigurationPropertiesBinderBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.properties.BoundConfigurationProperties", BoundConfigurationProperties__BeanDefinitions.getBoundConfigurationPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter", MethodValidationExcludeFilter__BeanDefinitions.getMethodValidationExcludeFilterBeanDefinition());
+    beanFactory.registerBeanDefinition("spring.cloud.vault.kv-org.springframework.cloud.vault.config.VaultKeyValueBackendProperties", VaultKeyValueBackendProperties__BeanDefinitions.getVaultKeyValueBackendPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.vault.config.VaultBootstrapConfiguration", VaultBootstrapConfiguration__BeanDefinitions.getVaultBootstrapConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("clientHttpRequestFactoryWrapper", VaultBootstrapConfiguration__BeanDefinitions.getClientHttpRequestFactoryWrapperBeanDefinition());
+    beanFactory.registerBeanDefinition("vaultRestTemplateFactory", VaultBootstrapConfiguration__BeanDefinitions.getVaultRestTemplateFactoryBeanDefinition());
+    beanFactory.registerBeanDefinition("vaultTemplate", VaultBootstrapConfiguration__BeanDefinitions.getVaultTemplateBeanDefinition());
+    beanFactory.registerBeanDefinition("vaultTaskScheduler", VaultBootstrapConfiguration__BeanDefinitions.getVaultTaskSchedulerBeanDefinition());
+    beanFactory.registerBeanDefinition("vaultSessionManager", VaultBootstrapConfiguration__BeanDefinitions.getVaultSessionManagerBeanDefinition());
+    beanFactory.registerBeanDefinition("clientAuthentication", VaultBootstrapConfiguration__BeanDefinitions.getClientAuthenticationBeanDefinition());
+    beanFactory.registerBeanDefinition("spring.cloud.vault-org.springframework.cloud.vault.config.VaultProperties", VaultProperties__BeanDefinitions.getVaultPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.config.client.ConfigServiceBootstrapConfiguration", ConfigServiceBootstrapConfiguration__BeanDefinitions.getConfigServiceBootstrapConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("configClientProperties", ConfigServiceBootstrapConfiguration__BeanDefinitions.getConfigClientPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("configServicePropertySource", ConfigServiceBootstrapConfiguration__BeanDefinitions.getConfigServicePropertySourceBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration", PropertySourceBootstrapConfiguration__BeanDefinitions.getPropertySourceBootstrapConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("spring.cloud.config-org.springframework.cloud.bootstrap.config.PropertySourceBootstrapProperties", PropertySourceBootstrapProperties__BeanDefinitions.getPropertySourceBootstrapPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration", EncryptionBootstrapConfiguration__BeanDefinitions.getEncryptionBootstrapConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("keyProperties", EncryptionBootstrapConfiguration__BeanDefinitions.getKeyPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("environmentDecryptApplicationListener", EncryptionBootstrapConfiguration__BeanDefinitions.getEnvironmentDecryptApplicationListenerBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration", ConfigurationPropertiesRebinderAutoConfiguration__BeanDefinitions.getConfigurationPropertiesRebinderAutoConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("configurationPropertiesBeans", ConfigurationPropertiesRebinderAutoConfiguration__BeanDefinitions.getConfigurationPropertiesBeansBeanDefinition());
+    beanFactory.registerBeanDefinition("configurationPropertiesRebinder", ConfigurationPropertiesRebinderAutoConfiguration__BeanDefinitions.getConfigurationPropertiesRebinderBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration", PropertyPlaceholderAutoConfiguration__BeanDefinitions.getPropertyPlaceholderAutoConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("propertySourcesPlaceholderConfigurer", PropertyPlaceholderAutoConfiguration__BeanDefinitions.getPropertySourcesPlaceholderConfigurerBeanDefinition());
+  }
+
+  /**
+   * Register the aliases.
+   */
+  public void registerAliases(DefaultListableBeanFactory beanFactory) {
+  }
+}
